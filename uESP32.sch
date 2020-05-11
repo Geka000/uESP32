@@ -31,7 +31,7 @@ U 1 1 5E5EE9EE
 P 900 1950
 F 0 "J1" H 955 2417 50  0000 C CNN
 F 1 "USB_B_Micro" H 955 2326 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 1050 1900 50  0001 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 1050 1900 50  0001 C CNN
 F 3 "~" H 1050 1900 50  0001 C CNN
 	1    900  1950
 	1    0    0    -1  
@@ -121,9 +121,9 @@ Wire Wire Line
 	1800 1150 1800 1450
 Text GLabel 3450 1650 2    50   Input ~ 0
 DTR
-Text GLabel 3450 1950 2    50   Input ~ 0
-TXD0
 Text GLabel 3450 2050 2    50   Input ~ 0
+TXD0
+Text GLabel 3450 1950 2    50   Input ~ 0
 RXD0
 Text GLabel 3450 2250 2    50   Input ~ 0
 RTS
@@ -464,7 +464,7 @@ U 1 1 5E5FEFE9
 P 9450 4200
 F 0 "D2" H 9450 4435 50  0000 C CNN
 F 1 "LED" H 9450 4344 50  0000 C CNN
-F 2 "LED_SMD:LED_0402_1005Metric" V 9450 4200 50  0001 C CNN
+F 2 "LED_SMD:LED_1806_4516Metric" V 9450 4200 50  0001 C CNN
 F 3 "~" V 9450 4200 50  0001 C CNN
 	1    9450 4200
 	1    0    0    -1  
@@ -553,8 +553,6 @@ Text GLabel 5850 3350 2    50   Input ~ 0
 IO35
 Wire Wire Line
 	5550 3350 5850 3350
-Text GLabel 7700 4000 0    50   Input ~ 0
-IO35
 Wire Wire Line
 	7700 4000 7850 4000
 Connection ~ 7850 4000
@@ -717,39 +715,6 @@ Connection ~ 9300 1900
 Wire Wire Line
 	9300 1900 9700 1900
 $Comp
-L Connector_Generic:Conn_01x14 J2
-U 1 1 5E6405A3
-P 1750 6400
-F 0 "J2" H 1830 6392 50  0000 L CNN
-F 1 "Conn_01x14" H 1830 6301 50  0000 L CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_1x14_P1.27mm_Vertical" H 1750 6400 50  0001 C CNN
-F 3 "~" H 1750 6400 50  0001 C CNN
-	1    1750 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x14 J3
-U 1 1 5E64086A
-P 4150 6400
-F 0 "J3" H 4230 6392 50  0000 L CNN
-F 1 "Conn_01x14" H 4230 6301 50  0000 L CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_1x14_P1.27mm_Vertical" H 4150 6400 50  0001 C CNN
-F 3 "~" H 4150 6400 50  0001 C CNN
-	1    4150 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x10 J4
-U 1 1 5E6409C8
-P 2900 6200
-F 0 "J4" H 2980 6192 50  0000 L CNN
-F 1 "Conn_01x10" H 2980 6101 50  0000 L CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_1x10_P1.27mm_Vertical" H 2900 6200 50  0001 C CNN
-F 3 "~" H 2900 6200 50  0001 C CNN
-	1    2900 6200
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0123
 U 1 1 5E640F6D
 P 1000 5800
@@ -789,10 +754,6 @@ Wire Wire Line
 	4350 1250 4150 1250
 Wire Wire Line
 	4350 1350 4150 1350
-Text GLabel 1200 6100 0    50   Input ~ 0
-SENSOR_VP
-Text GLabel 1200 6200 0    50   Input ~ 0
-SENSOR_VN
 Wire Wire Line
 	1200 6100 1550 6100
 Wire Wire Line
@@ -801,9 +762,9 @@ Text GLabel 5850 3250 2    50   Input ~ 0
 IO34
 Wire Wire Line
 	5850 3250 5550 3250
-Text GLabel 1200 6300 0    50   Input ~ 0
+Text GLabel 1200 6100 0    50   Input ~ 0
 IO34
-Text GLabel 1200 6400 0    50   Input ~ 0
+Text GLabel 1200 6200 0    50   Input ~ 0
 IO35
 Wire Wire Line
 	1550 6400 1200 6400
@@ -819,15 +780,15 @@ Text GLabel 5850 2850 2    50   Input ~ 0
 IO26
 Text GLabel 5850 2950 2    50   Input ~ 0
 IO27
-Text GLabel 1200 6500 0    50   Input ~ 0
+Text GLabel 1200 6300 0    50   Input ~ 0
 IO32
-Text GLabel 1200 6600 0    50   Input ~ 0
+Text GLabel 1200 6400 0    50   Input ~ 0
 IO33
-Text GLabel 1200 6700 0    50   Input ~ 0
+Text GLabel 1200 6500 0    50   Input ~ 0
 IO25
-Text GLabel 1200 6800 0    50   Input ~ 0
+Text GLabel 1200 6600 0    50   Input ~ 0
 IO26
-Text GLabel 1200 6900 0    50   Input ~ 0
+Text GLabel 1200 6700 0    50   Input ~ 0
 IO27
 Text GLabel 5800 1650 2    50   Input ~ 0
 IO12
@@ -866,64 +827,41 @@ Wire Wire Line
 Wire Wire Line
 	1200 7100 1550 7100
 $Comp
-L power:GND #PWR0125
-U 1 1 5E6B7301
-P 2100 5900
-F 0 "#PWR0125" H 2100 5650 50  0001 C CNN
-F 1 "GND" H 2105 5727 50  0000 C CNN
-F 2 "" H 2100 5900 50  0001 C CNN
-F 3 "" H 2100 5900 50  0001 C CNN
-	1    2100 5900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2700 5800 2100 5800
-Wire Wire Line
-	2100 5800 2100 5900
-$Comp
 L Connector_Generic:Conn_01x02 J5
 U 1 1 5E6BEB48
-P 6850 3650
-F 0 "J5" H 6930 3642 50  0000 L CNN
-F 1 "Conn_01x02" H 6930 3551 50  0000 L CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical" H 6850 3650 50  0001 C CNN
-F 3 "~" H 6850 3650 50  0001 C CNN
-	1    6850 3650
-	1    0    0    -1  
+P 6700 3750
+F 0 "J5" H 6780 3742 50  0000 L CNN
+F 1 "Conn_01x02" H 6780 3651 50  0000 L CNN
+F 2 "Connector_JST:JST_GH_BM02B-GHS-TBT_1x02-1MP_P1.25mm_Vertical" H 6700 3750 50  0001 C CNN
+F 3 "~" H 6700 3750 50  0001 C CNN
+	1    6700 3750
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0126
 U 1 1 5E6BEE5E
-P 6550 3850
-F 0 "#PWR0126" H 6550 3600 50  0001 C CNN
-F 1 "GND" H 6555 3677 50  0000 C CNN
-F 2 "" H 6550 3850 50  0001 C CNN
-F 3 "" H 6550 3850 50  0001 C CNN
-	1    6550 3850
+P 6900 4550
+F 0 "#PWR0126" H 6900 4300 50  0001 C CNN
+F 1 "GND" H 6905 4377 50  0000 C CNN
+F 2 "" H 6900 4550 50  0001 C CNN
+F 3 "" H 6900 4550 50  0001 C CNN
+	1    6900 4550
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+BATT #PWR0127
 U 1 1 5E6BEEDC
-P 6550 3550
-F 0 "#PWR0127" H 6550 3400 50  0001 C CNN
-F 1 "+BATT" H 6565 3723 50  0000 C CNN
-F 2 "" H 6550 3550 50  0001 C CNN
-F 3 "" H 6550 3550 50  0001 C CNN
-	1    6550 3550
+P 6900 3550
+F 0 "#PWR0127" H 6900 3400 50  0001 C CNN
+F 1 "+BATT" H 6915 3723 50  0000 C CNN
+F 2 "" H 6900 3550 50  0001 C CNN
+F 3 "" H 6900 3550 50  0001 C CNN
+	1    6900 3550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6650 3650 6550 3650
-Wire Wire Line
-	6550 3650 6550 3550
-Wire Wire Line
-	6550 3850 6550 3750
-Wire Wire Line
-	6550 3750 6650 3750
+	6900 3650 6900 3550
 Text GLabel 5800 1750 2    50   Input ~ 0
-IO13
-Text GLabel 2600 5900 0    50   Input ~ 0
 IO13
 Wire Wire Line
 	5800 1750 5550 1750
@@ -939,20 +877,6 @@ Text GLabel 4150 2250 0    50   Input ~ 0
 SDO|SD0
 Text GLabel 4150 2350 0    50   Input ~ 0
 SDI|SD1
-Text GLabel 2600 6000 0    50   Input ~ 0
-SHD|SD2
-Text GLabel 2600 6100 0    50   Input ~ 0
-SWP|SD3
-Text GLabel 2600 6200 0    50   Input ~ 0
-SCS|CMD
-Text GLabel 2600 6300 0    50   Input ~ 0
-SCK|CLK
-Text GLabel 2600 6400 0    50   Input ~ 0
-SDO|SD0
-Text GLabel 2600 6500 0    50   Input ~ 0
-SDI|SD1
-Wire Wire Line
-	2600 5900 2700 5900
 Wire Wire Line
 	4350 2250 4150 2250
 Wire Wire Line
@@ -965,18 +889,6 @@ Wire Wire Line
 	4350 2650 4150 2650
 Wire Wire Line
 	4150 2750 4350 2750
-Wire Wire Line
-	2700 6000 2600 6000
-Wire Wire Line
-	2600 6100 2700 6100
-Wire Wire Line
-	2700 6200 2600 6200
-Wire Wire Line
-	2600 6300 2700 6300
-Wire Wire Line
-	2700 6400 2600 6400
-Wire Wire Line
-	2600 6500 2700 6500
 Text GLabel 5800 1250 2    50   Input ~ 0
 IO2
 Text GLabel 5800 1950 2    50   Input ~ 0
@@ -985,18 +897,10 @@ Wire Wire Line
 	5800 1250 5550 1250
 Wire Wire Line
 	5800 1950 5550 1950
-Text GLabel 2600 6600 0    50   Input ~ 0
-IO15
-Text GLabel 2600 6700 0    50   Input ~ 0
-IO2
-Wire Wire Line
-	2700 6600 2600 6600
-Wire Wire Line
-	2600 6700 2700 6700
-Text GLabel 3800 5800 0    50   Input ~ 0
+Text GLabel 2950 5800 0    50   Input ~ 0
 IO0
 Wire Wire Line
-	3950 5800 3800 5800
+	3100 5800 2950 5800
 Text GLabel 5800 1450 2    50   Input ~ 0
 IO4
 Text GLabel 5800 2050 2    50   Input ~ 0
@@ -1021,57 +925,57 @@ Wire Wire Line
 	5800 2250 5550 2250
 Wire Wire Line
 	5550 2350 5800 2350
-Text GLabel 3800 5900 0    50   Input ~ 0
+Text GLabel 2950 6100 0    50   Input ~ 0
 IO4
-Text GLabel 3800 6000 0    50   Input ~ 0
+Text GLabel 2950 6200 0    50   Input ~ 0
 IO16
-Text GLabel 3800 6100 0    50   Input ~ 0
+Text GLabel 2950 6300 0    50   Input ~ 0
 IO17
-Text GLabel 3800 6200 0    50   Input ~ 0
+Text GLabel 2950 6400 0    50   Input ~ 0
 IO5
-Text GLabel 3800 6300 0    50   Input ~ 0
+Text GLabel 2950 6500 0    50   Input ~ 0
 IO18
-Text GLabel 3800 6400 0    50   Input ~ 0
+Text GLabel 2950 6600 0    50   Input ~ 0
 IO19
 Wire Wire Line
-	3800 5900 3950 5900
+	2950 6100 3100 6100
 Wire Wire Line
-	3950 6000 3800 6000
+	3100 6200 2950 6200
 Wire Wire Line
-	3800 6100 3950 6100
+	2950 6300 3100 6300
 Wire Wire Line
-	3950 6200 3800 6200
+	3100 6400 2950 6400
 Wire Wire Line
-	3800 6300 3950 6300
+	2950 6500 3100 6500
 Wire Wire Line
-	3950 6400 3800 6400
+	3100 6600 2950 6600
 Text GLabel 5800 2450 2    50   Input ~ 0
 IO21
-Text GLabel 3800 6600 0    50   Input ~ 0
+Text GLabel 2950 6700 0    50   Input ~ 0
 IO21
-Text GLabel 3800 6700 0    50   Input ~ 0
+Text GLabel 2950 6800 0    50   Input ~ 0
 RXD0
-Text GLabel 3800 6800 0    50   Input ~ 0
+Text GLabel 2950 6900 0    50   Input ~ 0
 TXD0
 Wire Wire Line
-	3800 6600 3950 6600
+	2950 6700 3100 6700
 Wire Wire Line
-	3800 6700 3950 6700
+	2950 6800 3100 6800
 Wire Wire Line
-	3950 6800 3800 6800
+	3100 6900 2950 6900
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0128
 U 1 1 5E742FE0
-P 3400 7100
-F 0 "#PWR?" H 3400 6850 50  0001 C CNN
-F 1 "GND" H 3405 6927 50  0000 C CNN
-F 2 "" H 3400 7100 50  0001 C CNN
-F 3 "" H 3400 7100 50  0001 C CNN
-	1    3400 7100
+P 2550 7000
+F 0 "#PWR0128" H 2550 6750 50  0001 C CNN
+F 1 "GND" H 2555 6827 50  0000 C CNN
+F 2 "" H 2550 7000 50  0001 C CNN
+F 3 "" H 2550 7000 50  0001 C CNN
+	1    2550 7000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3950 7100 3400 7100
+	3100 7000 2550 7000
 Text GLabel 5800 2550 2    50   Input ~ 0
 IO22
 Text GLabel 5800 2650 2    50   Input ~ 0
@@ -1082,12 +986,38 @@ Wire Wire Line
 	5550 2550 5800 2550
 Wire Wire Line
 	5800 2650 5550 2650
-Text GLabel 3800 6900 0    50   Input ~ 0
+Text GLabel 2900 7400 0    50   Input ~ 0
 IO22
-Text GLabel 3800 7000 0    50   Input ~ 0
+Text GLabel 2900 7500 0    50   Input ~ 0
 IO23
 Wire Wire Line
-	3800 6900 3950 6900
+	2900 7400 3050 7400
 Wire Wire Line
-	3950 7000 3800 7000
+	3050 7500 2900 7500
+$Comp
+L Connector_Generic:Conn_01x10 J6
+U 1 1 5E6F2241
+P 1750 6200
+F 0 "J6" H 1830 6192 50  0000 L CNN
+F 1 "Conn_01x10" H 1830 6101 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 1750 6200 50  0001 C CNN
+F 3 "~" H 1750 6200 50  0001 C CNN
+	1    1750 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J7
+U 1 1 5E6F22E8
+P 3300 6500
+F 0 "J7" H 3380 6492 50  0000 L CNN
+F 1 "Conn_01x10" H 3380 6401 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 3300 6500 50  0001 C CNN
+F 3 "~" H 3300 6500 50  0001 C CNN
+	1    3300 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 3750 6900 4550
+Text GLabel 7700 4000 0    50   Input ~ 0
+SENSOR_VP
 $EndSCHEMATC
